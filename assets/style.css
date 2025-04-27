@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'CupheadPoster';
+  src: url('fonts/CupheadPoster-Regular(Cyr_Lat_English).ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CupheadVogue';
+  src: url('fonts/CupheadVogue-ExtraBold-merged.ttf') format('truetype');
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+.sobre{
+  width: 70%;
+  height: 60%;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  border: solid 5px #2c2c2c;
+  box-shadow: 5px 5px 0px#2c2c2c;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.sobre h1{
+  font-family: 'CupheadVogue';
+  font-size: 3rem;
+}
+.sobre h2{
+  font-family: 'CupheadVogue';
+  font-size: 2rem;
+}
+.sobre p{
+  font-family: 'CupheadVogue';
+  font-size: 1.75rem;
+}
+.number{
+  width: 100%;
+  height: 17rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: rgb(179, 77, 54);
+  font-weight: 900;
+}
+.buttons{
+  width: 70%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.comum{
+  width: 100%;
+  height: 5rem;
+  background-color: #b34d36;
+  color: white;
+  border-radius: 1rem;
+  border: solid 5px #2c2c2c;
+  font-size: 2rem;
+  font-family: 'CupheadVogue';
+  box-shadow: 4px 4px 0px#2c2c2c;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(66, 201, 32); /* Cor de fundo levemente diferente no hover */
+    box-shadow: 6px 6px #212121; /* Aumentar sombra */
+    transform: translate(-2px, -2px); /* Mover levemente para simular "salto" */
+  }
+}
+.home{
+  height: 5rem; 
+  width: 10rem;
+  background-color: #b34d36;
+  color: white;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: solid 5px #2c2c2c;
+  box-shadow: 4px 4px 0px#2c2c2c;
+  &:hover{
+    background-color: rgb(66, 201, 32); /* Cor de fundo levemente diferente no hover */
+    box-shadow: 6px 6px #212121; /* Aumentar sombra */
+    transform: translate(-2px, -2px); /* Mover levemente para simular "salto" */
+  }
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+.slide.ativo {
+  opacity: 1;
+  z-index: 1;
+}
+
